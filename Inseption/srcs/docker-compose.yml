@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+    mariadb_svc:
+      build: ./requirements/mariadb
+      container_name: mariadb
+      restart: always
+      networks:
+      - inseption_net
+      volumes:
+      - /home/mdenys/data/db:/var/lib/mysql/
+      env_file: .env
+    nginx_svc:
+      build: ./requirements/nginx/
+      container_name: nginx
+      ports:
+       - "443:443"
+      restart: always
+      networks:
+       - inseption_net
+      volumes:
+        - /home/mdenys/data/wp:/var/www
+      extra_hosts:
+       - "mdenys.42.fr:127.0.0.1"
+      env_file: .env
+    wordpress_svc:
+      build: ./requirements/wordpress/
+      container_name: wordpress
+      restart: always
+      networks:
+       - inseption_net
+      volumes:
+       - /home/mdenys/data/wp:/var/www
+      env_file: .env
+
+
+networks:
+    inseption_net:
