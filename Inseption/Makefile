@@ -9,6 +9,8 @@ re:		clean up
 up:
 	mkdir -p /home/mdenys/data/db
 	mkdir -p /home/mdenys/data/wp
+	chmod 777 /home/mdenys/data/db
+	chmod 777 /home/mdenys/data/wp
 	$(D-CMD) up -d --build
 
 stop:
