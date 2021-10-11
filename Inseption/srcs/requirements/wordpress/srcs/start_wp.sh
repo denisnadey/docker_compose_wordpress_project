@@ -8,7 +8,7 @@ echo "listen = 9000" >> /etc/php7/php-fpm.d/www.conf
 if [ ! -d "/var/www/localhost/wordpress" ] 
 then
 	mkdir -p /var/www/localhost/wordpress
-	chmod 755 /var/www/localhost/wordpress
+	chmod 777 /var/www/localhost/wordpress
 	cd /var/www/localhost/wordpress
 
 	wp core download    --allow-root \

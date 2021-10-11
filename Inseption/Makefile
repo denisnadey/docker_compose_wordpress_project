@@ -1,6 +1,5 @@
 D-COMP=srcs/docker-compose.yml
 D-CMD=docker-compose -f $(D-COMP)
-
 .PHONY:	all up stop down start re
 
 all:	up

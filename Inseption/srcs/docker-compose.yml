@@ -1,12 +1,11 @@
 version: "3.9"
-
 services:
     mariadb_svc:
       build: ./requirements/mariadb
       container_name: mariadb
       restart: always
       networks:
-      - inseption_net
+      - mine_net42_network_by_mdenys
       volumes:
       - /home/mdenys/data/db:/var/lib/mysql/
       env_file: .env
@@ -17,7 +16,7 @@ services:
        - "443:443"
       restart: always
       networks:
-       - inseption_net
+       - mine_net42_network_by_mdenys
       volumes:
         - /home/mdenys/data/wp:/var/www
       extra_hosts:
@@ -28,11 +27,9 @@ services:
       container_name: wordpress
       restart: always
       networks:
-       - inseption_net
+       - mine_net42_network_by_mdenys
       volumes:
        - /home/mdenys/data/wp:/var/www
       env_file: .env
-
-
 networks:
-    inseption_net:
+    mine_net42_network_by_mdenys:
