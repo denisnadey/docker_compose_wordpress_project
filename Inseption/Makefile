@@ -18,7 +18,8 @@ down:
 	$(D-CMD) down --rmi all -v
 
 clean: 	down
-	sh ./srcs/requirements/tools/rm.sh
+	rm -rf /home/mdenys/data/db
+	rm -rf /home/mdenys/data/wp
 
 start:
 	$(D-CMD) start
