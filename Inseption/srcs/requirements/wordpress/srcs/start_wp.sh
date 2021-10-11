@@ -28,19 +28,19 @@ then
 						--admin_password="mdenys" \
 						--admin_email="mdenys@student.21-school.ru" \
 						--quiet
-	wp user create      eke eke@example.com \
+	wp user create      sobaka sobaka@$DOMAIN_NAME \
 						--role=author \
-						--user_pass="eke" \
+						--user_pass="sobaka" \
 						--allow-root \
 						--quiet
-	wp user create      biba biba@example.com \
+	wp user create      dmitriy dmitriy@$DOMAIN_NAME \
 						--role=author \
-						--user_pass="biba" \
+						--user_pass="dmitriy" \
 						--allow-root \
 						--quiet
-	wp user create      boba boba@example.com \
+	wp user create      garfilrd garfilrd@$DOMAIN_NAME \
 						--role=author \
-						--user_pass="boba" \
+						--user_pass="garfilrd" \
 						--allow-root \
 						--quiet
 fi
